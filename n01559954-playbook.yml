@@ -1,0 +1,12 @@
+---
+- name: Playbook for Package Management and Patching
+  hosts: "{{ lookup('env', 'REMOTE_HOSTS') }}"
+  remote_user: "{{ lookup('env', 'REMOTE_USER') }}"
+  become: true
+  
+  roles:
+    - role: /Users/chess/automation/ansible/roles/datadisk-n01559954
+    - role: /Users/chess/automation/ansible/roles/profile-n01559954
+    - role: /Users/chess/automation/ansible/roles/user-n01559954
+    - role: /Users/chess/automation/ansible/roles/webserver-n01559954
+
